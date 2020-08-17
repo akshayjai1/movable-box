@@ -1,10 +1,12 @@
-# Moveable box generator Application.
+# Moveable box generator Application
 
 ## General Info
 
 User can create multiple boxes, select a box by clicking on it & move the box using keys "A" "S" "D" "W"
 
 ## Technologies Used
+
+Project is created with:
 
 - ReactJs
 
