@@ -2,7 +2,7 @@
 
 ## General Info
 
-User can create multiple boxes, select a box by clicking on it & move the box using keys "A" "S" "D" "W"
+An app that generates new multiple boxes & moves those boxes using keyboard keys "A" "S" "D" "W"
 
 ## Technologies Used
 
