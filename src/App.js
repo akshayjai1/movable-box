@@ -19,6 +19,7 @@ function App() {
       <div className={styles.container}>
         <div className={styles.top}>
           <AddButton></AddButton>
+          <p className={styles.info}>*Use "A" "S" "D" "W" keys</p>
           <KeyboardButton></KeyboardButton>
         </div>
         <BoxContainer></BoxContainer>
