@@ -12,5 +12,7 @@ User can create multiple boxes, select a box by clicking on it & move the box us
 
 To run this project, install it locally using npm:
 
+```
 $ npm install
 $ npm start
+```
