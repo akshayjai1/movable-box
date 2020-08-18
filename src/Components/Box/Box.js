@@ -71,6 +71,7 @@ let Box = () => {
               : {
                   position: "relative",
                   zIndex: item.id,
+                  transform: `translate(${item.right}px, ${item.bottom}px)`,
                 }
           }
           onClick={() => handleSelect(item.id)}
