@@ -48,6 +48,7 @@ export const reducer = (state, action) => {
             if (action.payload === "top") {
               item.bottom = item.bottom - 5;
             } else if (action.payload === "bottom") {
+              if(item.bottom < 100)
               item.bottom = item.bottom + 5;
             } else if (action.payload === "right") {
               item.right = item.right + 5;

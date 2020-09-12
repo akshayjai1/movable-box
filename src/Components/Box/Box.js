@@ -1,14 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useCallback, useState } from "react";
 import styles from "./Box.module.css";
-import { boxContext } from "../../Context/Context";
+import { BoxContext } from "../../Context/Context";
 import { DELETE_BOX, SELECT_BOX, MOVE_BOX } from "../../Context/ActionTypes";
+import { fn,fn2 } from "../../App";
 
-let Box = () => {
-  const { state, dispatch } = useContext(boxContext);
 
+// function Box( ){
+// var keypressed = useCallback();
+// var keypressed = useCallback();
+// var keypressed = useCallback();
+// state, 
+// if(key == 1){
+//   useCallback  
+// }
+// lifecycle() {
+// s =1 
+// key == 1
+
+// }
+// }
+let Box = (k) => {
+  const { state, dispatch } = useContext(BoxContext);
   // call back function after keypress & A S D W keys are detected on keyCode & dispatches action
-
-  let keypressed = (e) => {
+  const keypressed = useCallback((e) => {
+    console.log('calling keypressed');
     e.preventDefault();
     if (e.keyCode === 97) {
       dispatch({
@@ -35,13 +50,11 @@ let Box = () => {
         type: DELETE_BOX,
       });
     }
-  };
-
+  },[dispatch]);
   // Keyboard Event Lister
-
   if (state.keyboard === true) {
-    document.onkeypress = keypressed;
-  }
+    window.addEventListener('keypress',keypressed);
+  } 
 
   // dispatches action after clicking on box (selects the box)
 
@@ -54,10 +67,11 @@ let Box = () => {
 
   return (
     <>
-      {state.boxesArr.map((item) => (
+      {state.boxesArr.map((item,index) => (
         <div
           className={styles.box}
-          key={item.id}
+          key={index}
+          // key={item.id}
           // changes styles the positon of the box if box is selected or clicked
           style={
             item.selected === true

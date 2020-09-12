@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import styles from "./KeyboardButton.module.css";
-import { boxContext } from "../../Context/Context";
+import { BoxContext } from "../../Context/Context";
 import { KEYBOARD } from "../../Context/ActionTypes";
 
 const KeyboardButton = () => {
-  const { state, dispatch } = useContext(boxContext);
+  const { state, dispatch } = useContext(BoxContext);
 
   const toggleKeyboard = () => {
     dispatch({

@@ -4,6 +4,8 @@ import App from './App';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
+  const linkElement = getByText(/Use "A", "S", "D", "W" keys to move box/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+

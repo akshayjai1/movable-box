@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const boxContext = createContext();
+export const BoxContext = createContext();
